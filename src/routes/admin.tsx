@@ -67,12 +67,12 @@ function AdminLayout() {
     );
   }
 
-  const nav = [
+  const nav: Array<{ to: string; label: string; icon: typeof Building2; exact?: boolean }> = [
     { to: "/admin", label: "Dashboard", icon: LayoutDashboard, exact: true },
     { to: "/admin/companies", label: "Companies", icon: Building2 },
     { to: "/admin/contacts", label: "Contacts", icon: Users },
     { to: "/admin/applications", label: "Applications", icon: Briefcase },
-  ] as const;
+  ];
 
   return (
     <div className="flex min-h-screen bg-secondary/30">
