@@ -19,6 +19,7 @@ import {
   Mail,
   MapPin,
   ArrowRight,
+  MessageCircle,
 } from "lucide-react";
 import hero from "@/assets/hero-machine.jpg";
 import cnc from "@/assets/machine-cnc.jpg";
@@ -84,23 +85,46 @@ function Index() {
   return (
     <div className="min-h-screen bg-background">
       <Toaster />
+
+      {/* Top utility bar */}
+      <div className="bg-primary text-primary-foreground text-xs">
+        <div className="container mx-auto flex flex-wrap items-center justify-between gap-2 px-4 py-2">
+          <div className="flex items-center gap-5">
+            <a href="tel:+919825128694" className="flex items-center gap-1.5 hover:text-accent transition">
+              <Phone className="h-3.5 w-3.5" /> +91 98251 28694
+            </a>
+            <a href="mailto:contact@forgetech.in" className="hidden items-center gap-1.5 hover:text-accent transition sm:flex">
+              <Mail className="h-3.5 w-3.5" /> contact@forgetech.in
+            </a>
+          </div>
+          <span className="hidden font-medium text-accent md:inline">
+            Make in India, By Indians for Indian Fabricators !!!
+          </span>
+        </div>
+      </div>
+
       {/* Header */}
-      <header className="sticky top-0 z-50 border-b border-border bg-background/80 backdrop-blur-lg">
-        <div className="container mx-auto flex h-16 items-center justify-between px-4">
-          <a href="/" className="flex items-center gap-2">
-            <div className="flex h-9 w-9 items-center justify-center rounded-md bg-[image:var(--gradient-accent)]">
-              <Cog className="h-5 w-5 text-primary-foreground" />
+      <header className="sticky top-0 z-50 border-b border-border bg-background/90 backdrop-blur-lg">
+        <div className="container mx-auto flex h-20 items-center justify-between px-4">
+          <a href="/" className="flex items-center gap-2.5">
+            <div className="flex h-11 w-11 items-center justify-center rounded-md bg-[image:var(--gradient-accent)] shadow-[var(--shadow-card)]">
+              <Cog className="h-6 w-6 text-primary-foreground" />
             </div>
-            <span className="text-lg font-bold tracking-tight">ForgeTech</span>
+            <div className="leading-tight">
+              <div className="text-xl font-extrabold tracking-tight text-primary">FORGETECH</div>
+              <div className="text-[10px] font-medium uppercase tracking-[0.2em] text-muted-foreground">Technology Pvt. Ltd</div>
+            </div>
           </a>
-          <nav className="hidden items-center gap-8 text-sm font-medium md:flex">
+          <nav className="hidden items-center gap-7 text-sm font-semibold lg:flex">
+            <a href="#" className="text-accent">Home</a>
+            <a href="#why" className="hover:text-accent transition">About Us</a>
             <a href="#products" className="hover:text-accent transition">Products</a>
-            <a href="#featured" className="hover:text-accent transition">Featured</a>
-            <a href="#why" className="hover:text-accent transition">Why Us</a>
-            <a href="#inquiry" className="hover:text-accent transition">Inquiry</a>
+            <a href="#featured" className="hover:text-accent transition">For Client</a>
+            <a href="#certifications" className="hover:text-accent transition">Gallery</a>
+            <a href="#inquiry" className="hover:text-accent transition">Contact</a>
           </nav>
-          <Button asChild variant="default" className="bg-accent text-accent-foreground hover:bg-accent/90">
-            <a href="#inquiry">Contact</a>
+          <Button asChild className="rounded-full bg-[image:var(--gradient-accent)] px-5 text-primary-foreground hover:opacity-90">
+            <a href="#inquiry">Admin Login</a>
           </Button>
         </div>
       </header>
@@ -121,27 +145,47 @@ function Index() {
               Heavy Machinery · Since 1998
             </span>
             <h1 className="mt-6 text-5xl font-extrabold leading-[1.05] tracking-tight md:text-7xl">
-              Heavy Machines.
+              Make in India,
               <br />
               <span className="bg-[image:var(--gradient-accent)] bg-clip-text text-transparent">
-                Precision CNC Solutions.
+                for Indian Fabricators !!!
               </span>
             </h1>
             <p className="mt-6 max-w-xl text-lg text-primary-foreground/80">
-              Engineered for uptime. From CNC centers to legacy lathes — we supply, install
-              and service the machines that keep your shop running.
+              Leading provider of CNC Laser Cutting, Press Brake Machines, and CAD/CAM solutions
+              for the sheet metal industry.
             </p>
             <div className="mt-10 flex flex-wrap gap-4">
               <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90 shadow-[var(--shadow-elegant)]">
-                <a href="#inquiry">Request a Quote <ArrowRight className="ml-2 h-4 w-4" /></a>
+                <a href="#products">Explore Products <ArrowRight className="ml-2 h-4 w-4" /></a>
               </Button>
               <Button asChild size="lg" variant="outline" className="border-primary-foreground/30 bg-transparent text-primary-foreground hover:bg-primary-foreground/10">
-                <a href="#featured">Browse Machines</a>
+                <a href="#inquiry">Request Quote</a>
               </Button>
             </div>
           </div>
         </div>
       </section>
+
+      {/* Floating action buttons */}
+      <div className="fixed bottom-6 right-6 z-40 flex flex-col gap-3">
+        <a
+          href="https://wa.me/919825128694"
+          target="_blank"
+          rel="noopener"
+          aria-label="WhatsApp"
+          className="flex h-12 w-12 items-center justify-center rounded-full bg-[oklch(0.7_0.18_150)] text-primary-foreground shadow-[var(--shadow-elegant)] transition hover:scale-110"
+        >
+          <MessageCircle className="h-6 w-6" />
+        </a>
+        <a
+          href="#inquiry"
+          aria-label="Chat"
+          className="flex h-12 w-12 items-center justify-center rounded-full bg-accent text-accent-foreground shadow-[var(--shadow-elegant)] transition hover:scale-110"
+        >
+          <Mail className="h-5 w-5" />
+        </a>
+      </div>
 
       {/* Categories */}
       <section id="products" className="container mx-auto px-4 py-24">
