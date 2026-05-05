@@ -274,8 +274,8 @@ function Index() {
           <div>
             <h4 className="mb-4 text-sm font-semibold uppercase tracking-wider">Contact</h4>
             <ul className="space-y-2 text-sm text-primary-foreground/70">
-              <li className="flex gap-2"><Phone className="h-4 w-4" /> +91 80 1234 5678</li>
-              <li className="flex gap-2"><Mail className="h-4 w-4" /> sales@forgetech.in</li>
+              <li className="flex items-center gap-2"><Phone className="h-4 w-4" /><span>+91 80 1234 5678</span></li>
+              <li className="flex items-center gap-2"><Mail className="h-4 w-4" /><span>sales@forgetech.in</span></li>
             </ul>
           </div>
           <div>
