@@ -19,6 +19,7 @@ import {
   Mail,
   MapPin,
   ArrowRight,
+  MessageCircle,
 } from "lucide-react";
 import hero from "@/assets/hero-machine.jpg";
 import cnc from "@/assets/machine-cnc.jpg";
