@@ -120,11 +120,11 @@ function Index() {
             <a href="#why" className="hover:text-accent transition">About Us</a>
             <a href="#products" className="hover:text-accent transition">Products</a>
             <a href="#featured" className="hover:text-accent transition">For Client</a>
-            <a href="#certifications" className="hover:text-accent transition">Gallery</a>
+            <Link to="/careers" className="hover:text-accent transition">Careers</Link>
             <a href="#inquiry" className="hover:text-accent transition">Contact</a>
           </nav>
           <Button asChild className="rounded-full bg-[image:var(--gradient-accent)] px-5 text-primary-foreground hover:opacity-90">
-            <a href="#inquiry">Admin Login</a>
+            <Link to="/auth">Admin Login</Link>
           </Button>
         </div>
       </header>
